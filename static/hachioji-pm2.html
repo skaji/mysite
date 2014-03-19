@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+    body {
+        font-size: 350%;
+        width: 90%;
+        margin: 10px auto;
+    }
+    pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+        font-size: 50%;
+        padding: 10px;
+        border: 1px solid #555;
+    }
+</style>
+
+<!--
+<script charset="utf-8" src="script.js"></script>
+<link rel="stylesheet" href="css.css">
+-->
+</head>
+<body>
+
+    <h1>hachioji.pm</h1>
+    <h1>2013/06/15</h1>
+
+    Shoichi Kaji<br>
+
+    <h2>Hosting?</h2>
+
+Plack::Middleware::URLMap
+<pre>
+use Plack::Builder;
+builder {
+    mount '/app1' =&gt; $app1;
+    mount '/app2' =&gt; $app2;
+};
+</pre>
+
+<pre>
+       --------------------------
+       |                        |
+       |   ----&gt; /app1 =&gt; $app1 |
+req ------|                     |
+       |   ----&gt; /app2 =&gt; $app2 |
+       |                        |
+       --------------------------
+</pre>
+
+$app1, $app2はCartonで別々に管理
+<br>
+=&gt; $app1と$app2 を別々のPerlで動かしたい。
+
+<br><br>
+<h2>nginx + Plack-Middlware-ReverseProxy</h2>
+<pre>
+                         --------------------
+                    --&gt;  | /app1  =&gt; $app1  |
+       ---------   |     --------------------
+req =&gt; | nginx | --|
+       ---------   |     --------------------
+                    --&gt;  | /app2  =&gt; $app2  |
+                         --------------------
+</pre>
+/etc/nginx/conf.d/app.conf
+<pre>
+server {
+    listen       example.com:80;
+    server_name  example.com;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Server $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    location /app1 { proxy_pass http://localhost:3001; }
+    location /app2 { proxy_pass http://localhost:3002; }
+}
+</pre>
+
+<pre>
+% plackup -l localhost:3001 --path /app1 app1.psgi
+% plackup -l localhost:3002 --path /app2 app2.psgi
+% sudo nginx
+</pre>
+
+
+$app1, $app2 を別々に管理できる :-)
+
+
+<br><br>
+<pre>
+PS:<a href="http://shoichi.me/phpMyAdmin/scripts/setup.php">http://shoichi.me/phpMyAdmin/scripts/setup.php</a>
+</pre>
+
+</body>
+</html>
+
+

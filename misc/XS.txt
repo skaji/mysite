@@ -1,0 +1,77 @@
+title: perlcall
+desc: C からの Perl 呼び出し規約
+url: http://perldoc.jp/docs/perl/5.16.1/perlcall.pod
+
+title: perlapi
+desc: perl public API の自動生成ドキュメント
+url: http://perldoc.jp/docs/perl/5.12.1/perlapi.pod
+
+title: perlapio
+desc: perl の抽象入出力インターフェース
+url: http://perldoc.jp/docs/perl/5.16.1/perlapio.pod
+
+title: perlxs
+desc: XS 言語リファレンスマニュアル
+url: http://perldoc.jp/docs/perl/5.14.1/perlxs.pod
+
+title: perlxstut
+desc: XSUB を書くためのチュートリアル
+url: http://perldoc.jp/docs/perl/5.8.8/perlxstut.pod
+
+title: perlembed
+desc: C プログラムへの Perl の埋め込み方
+url: http://perldoc.jp/docs/perl/5.16.1/perlembed.pod
+
+title: perlguts
+desc: Perl API の紹介
+url: http://perldoc.jp/docs/perl/5.14.1/perlguts.pod
+
+title: perlclib
+desc: 標準 C ライブラリ関数の内部的な代用品
+url: http://perldoc.jp/docs/perl/5.16.1/perlclib.pod
+
+title: gfx - Perlのメモリリークを見つける方法
+desc: 
+url: http://d.hatena.ne.jp/gfx/20110619/1308474313
+
+title: gfx - XS基礎文法最速マスター
+desc: 
+url: http://d.hatena.ne.jp/gfx/20100202/1265091606
+
+title: gfx - XSでメモリークを避けるたった一つの方法
+desc: 
+url: http://d.hatena.ne.jp/gfx/20100519/1274247355
+
+title: gfx - XSでCの文字列操作関数を使用するべきでない理由
+desc:
+url: http://d.hatena.ne.jp/gfx/20100907/1283837434
+
+title: gfx - PERL_NO_GET_CONTEXT
+desc:
+url: http://d.hatena.ne.jp/gfx/20091222/1261466764
+
+title: gfx - Fixed memory leaks in Class::MOP
+desc: 
+url: http://d.hatena.ne.jp/gfx/20090701/1246439598
+
+title: gfx - Devel::Peek::Dumpで見るSVのボディの型
+desc: 
+url: http://d.hatena.ne.jp/gfx/20090306/1236327089
+
+title: gfx - Test::LeakTrace
+desc:
+url: http://search.cpan.org/dist/Test-LeakTrace/lib/Test/LeakTrace/JA.pod
+
+title: gfx - モダンなXSの書き方
+desc: 
+url: http://d.hatena.ne.jp/gfx/20081218/1229567314
+
+title: gfx - Re: XSの勉強を始めるためのエントリーポイントは？
+desc:
+url: http://d.hatena.ne.jp/gfx/20090121/1232507043
+
+title: gfx - Perl Magicは意外と簡単に使える
+desc:
+url: http://d.hatena.ne.jp/gfx/20090204/1233725975
+
+

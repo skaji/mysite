@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+    body {
+        font-size: 400%;
+        width: 90%;
+        margin: 10px auto;
+    }
+    pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+        font-size: 70%;
+        padding: 10px;
+        border: 1px solid #555;
+    }
+</style>
+
+<!--
+<script charset="utf-8" src="script.js"></script>
+<link rel="stylesheet" href="css.css">
+-->
+</head>
+<body>
+
+    <h1>hachioji.pm</h1>
+    <h1>2013/02/23</h1>
+
+    <h2>About Me</h2>
+    ks0608, Shoichi Kaji<br>
+    learning Perl from Apr. 2012<br>
+
+    <h2>Recently</h2>
+    <ul>
+        <li>Want to use CPAN modules
+        <li>Want to use Perl 5.16 instead of 5.8
+        <li>Build Perl 5.16.2
+        <li>Write XS (difficult...)
+        <li>Use AnyEvent (difficult...)
+    </ul>
+
+    <h2>Git instaweb</h2>
+<pre>
+% git instaweb --httpd plackup
+* Unknown httpd specified: plackup
+* Can't locate Plack/MIME.pm in @INC
+  (@INC contains: /Library/Perl/5.12/darwin-thr..
+</pre>
+
+<pre>
+% git clone --recursive \
+  git://github.com/ks0608/p5-git-instaweb.git
+% cd p5-git-instaweb
+% cpanm .
+% cd git-controlled-dir
+% run-git-instaweb
+</pre>
+
+ex: http://shoichi.me:5000
+
+<h2>Thank you!</h2>
+
+
+
+
+</body>
+</html>
+

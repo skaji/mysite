@@ -1,0 +1,14 @@
+: cascade "layout/main.tx"
+
+: override content -> {
+
+<h1 class="page-header">shoichi.me</h1>
+
+<ul>
+    <li><a href="<: uri_for('/xs') :>">xs</a></li>
+    <li><a href="<: uri_for('/static/hachioji-pm.html') :>">hachioji-pm</a></li>
+    <li><a href="<: uri_for('/static/hachioji-pm2.html') :>">hachioji-pm2</a></li>
+    <li><a href="<: uri_for('/ip') :>">ip</a></li>
+</ul>
+
+: }
